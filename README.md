@@ -1,4 +1,5 @@
 # taptic
+<<<<<<< HEAD
 
 This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 3.6.1.
 
@@ -29,3 +30,8 @@ Run `grunt build` for building and `grunt serve` for preview.
 ## Testing
 
 Running `npm test` will run the unit tests with karma.
+=======
+game
+
+just installa and run
+>>>>>>> 61e27463c4dc1f3efdbe8e8dde6d10de63606fc2
