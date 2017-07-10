@@ -1,0 +1,99 @@
+.thing-form {
+  margin: 20px 0;
+}
+
+#banner {
+  border-bottom: none;
+  margin-top: -20px;
+}
+
+#banner h1 {
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.btn-social{
+  text-align: center;
+  padding-left: 0px;
+}
+
+.hero-unit {
+  position: relative;
+  padding: 30px 15px;
+  color: #F5F5F5;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  background: #4393B9;
+}
+
+.navbar-text {
+  margin-left: 15px;
+}
+
+.appname{
+  width: 100%;
+  padding-left: 15px;
+}
+
+.logutbutton{
+  position: absolute;
+  top:0;left:0;
+}
+
+.settingsbutton{
+  position: absolute;
+  top:10px;right:0;
+  padding-right: 10px;
+}
+
+.GUIbuttons{
+  position: absolute;
+  bottom:5px;right:0;
+  float: right;
+  padding-right: 10px;
+  text-align: center;
+}
+
+.centerLogin{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  min-width: 320px;
+  transform: translate(-50%,-50%);
+  background-color: rgba(0,0,0,0.5);
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+/**
+ * CSS3 keyboard arrow keys
+ */
+
+.arrowkeyW{
+  position: absolute;
+  bottom:65px;left:70px;
+}
+
+.arrowkeyS{
+  position: absolute;
+  bottom:5px;left:70px;
+}
+
+.arrowkeyA{
+  position: absolute;
+  bottom:5px;left:10px;
+}
+
+.arrowkeyD{
+  position: absolute;
+  bottom:5px;left:130px;
+}
+
+
+.glyphicon {
+    font-size: 50px;
+}
+
+body{
+  overflow-y: hidden;
+}

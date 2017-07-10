@@ -1,0 +1,89 @@
+<canvas id="c" ng-show="$ctrl.isLoggedIn()"/>
+
+<a class="arrowkeyW" ng-click="$ctrl.decDeltaY()" ng-show="$ctrl.isLoggedIn()">
+  <span class="glyphicon glyphicon-circle-arrow-up"></span>
+</a>
+<a class="arrowkeyA" ng-click="$ctrl.decDeltaX()" ng-show="$ctrl.isLoggedIn()">
+  <span class="glyphicon glyphicon-circle-arrow-left"></span>
+</a>
+<a class="arrowkeyS" ng-click="$ctrl.incDeltaY()" ng-show="$ctrl.isLoggedIn()">
+  <span class="glyphicon glyphicon-circle-arrow-down"></span>
+</a>
+<a class="arrowkeyD" ng-click="$ctrl.incDeltaX()" ng-show="$ctrl.isLoggedIn()">
+  <span class="glyphicon glyphicon-circle-arrow-right"></span>
+</a>
+
+<div class="" ng-show="$ctrl.isLoggedIn()">
+
+  <div class="settingsbutton">
+    <a ng-click="screenfull.toggle();" id="fullscreen"><span class="glyphicon glyphicon-fullscreen"></span></a>
+    <a ui-sref="settings"><span class="glyphicon glyphicon-cog"></span></a>
+    <a ui-sref="logout" ng-click="exitfullscreen()"><span class="glyphicon glyphicon-log-out"></span></a>
+  </div>
+  
+
+  <div class="GUIbuttons">
+    ZOOM [{{zoomToShow}}] <br>
+    <a> <span class="glyphicon glyphicon-plus-sign" ng-click="$ctrl.incSize()"></span></a>
+    <a> <span class="glyphicon glyphicon-minus-sign" ng-click="$ctrl.decSize()"></span></a> <br>
+
+    RANGE [{{rangeToShow}}] <br>
+    <a> <span class="glyphicon glyphicon-plus-sign" ng-click="$ctrl.incRange()"></span></a>
+    <a> <span class="glyphicon glyphicon-minus-sign" ng-click="$ctrl.decRange()"></span></a> <br>
+
+    FILL AMOUNT [{{amountToShow}}] <br>
+    <a> <span class="glyphicon glyphicon-plus-sign" ng-click="$ctrl.incAmount()"></span></a>
+    <a> <span class="glyphicon glyphicon-minus-sign" ng-click="$ctrl.decAmount()"></span></a> <br>
+  </div>
+</div>
+
+<div class="text-center pagination-centered" ng-hide="$ctrl.isLoggedIn()" style="white-space: nowrap;">
+  <h2 class="col-xs-12" style="padding-left:0px">TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic</h2>
+</div>
+<!--<hr class="col-xs-12" ng-hide="$ctrl.isLoggedIn()">-->
+<div class="text-center pagination-centered" ng-hide="$ctrl.isLoggedIn()" style="white-space: nowrap;position:absolute;bottom:0;left:-30px;">
+  <h2 class="col-xs-12" style="padding-left:0px">TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic TAPtic</h2>
+</div>
+
+<div ng-hide="$ctrl.isLoggedIn()">
+
+    <div class="col-xs-6 centerLogin">
+      <form class="form" name="form" ng-submit="$ctrl.login(form)" novalidate>
+
+        <div class="form-group">
+          <input type="email" name="email" class="form-control" ng-model="$ctrl.user.email" required placeholder="Email">
+        </div>
+        <div class="form-group">
+          <input type="password" name="password" class="form-control" ng-model="$ctrl.user.password" required placeholder="Password">
+        </div>
+
+        <div class="form-group has-error">
+          <p class="help-block" ng-show="form.email.$error.required && form.password.$error.required && $ctrl.submitted">
+             Please enter your email and password.
+          </p>
+          <p class="help-block" ng-show="form.email.$error.email && $ctrl.submitted">
+             Please enter a valid email.
+          </p>
+
+          <p class="help-block">{{ $ctrl.errors.other }}</p>
+        </div>
+
+        <div>
+          <button class="btn btn-inverse btn-lg btn-login col-xs-6 col-sm-6 col-md-6" type="submit">
+            Login
+          </button>
+          <a class="btn btn-default btn-lg btn-register col-xs-6 col-sm-6 col-md-6" ui-sref="signup">
+            Register
+          </a>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <oauth-buttons classes="btn-block"></oauth-buttons>
+          </div>
+        </div>
+      </form>
+    </div>
+</div>
+
+
+
